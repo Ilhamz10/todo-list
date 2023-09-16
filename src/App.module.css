@@ -1,0 +1,40 @@
+.App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	text-align: center;
+	font-size: 5em;
+	color: #e9d9d8;
+}
+
+.dropDownBox {
+	box-shadow: 0 2px 4px -2px;
+	max-width: 600px;
+    width: 90%;
+	background: #fff;
+}
+
+.options {
+	display: flex;
+    gap: 20px;
+}
+
+.dropDownInfo {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	border-top: 1px solid lightgray;
+	align-items: center;
+}
+
+.dropDownInfo p,
+.dropDownInfo span {
+	font-size: 0.8rem;
+	font-weight: 300;
+    color: gray;
+}

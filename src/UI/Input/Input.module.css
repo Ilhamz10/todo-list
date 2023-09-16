@@ -1,0 +1,78 @@
+.checkbox {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.checkbox .label {
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	border: 2px solid lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.checkbox .label svg {
+	display: none;
+}
+
+.checkbox .input {
+	display: none;
+}
+
+.checkbox .input:checked ~ label {
+	border-color: #77C0AF;
+}
+
+.checkbox .input:checked ~ label svg {
+	display: block;
+}
+
+.checkbox p {
+	font-size: 1.3rem;
+	font-weight: 300;
+}
+
+.checkbox:has(.input:checked) p {
+	color: lightgray;
+	text-decoration: line-through;
+}
+
+.text input {
+	font-size: 1.2rem;
+	border: none;
+	padding: 10px;
+	background: none;
+	width: 100%;
+}
+
+.text input:focus {
+	outline: none;
+	border: none;
+}
+
+.text input::placeholder {
+	font-style: italic;
+	color: lightgray;
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+}
+
+.radio input {
+	display: none;
+}
+
+.radio label {
+	border: 2px solid transparent;
+	border-radius: 5px;
+	padding: 5px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: gray;
+}
+
+.radio:has(input:checked) label {
+	border-color: #e9d9d8;
+}

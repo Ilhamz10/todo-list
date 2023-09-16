@@ -1,0 +1,11 @@
+.isActive svg{
+    transform: rotate(180deg);
+}
+
+.dropDownContent{
+    transition: .3s;
+}
+
+.isActive .dropDownContent{
+    display: none;
+}
