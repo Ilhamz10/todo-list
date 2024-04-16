@@ -1,4 +1,4 @@
-import React, { useContext, useCallback, useRef, useState } from 'react';
+import React, { useContext, useCallback, useState } from 'react';
 import classes from './App.module.css';
 import Button from './UI/Button/Button';
 import Input from './UI/Input/Input';

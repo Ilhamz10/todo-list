@@ -30,12 +30,12 @@
 	display: block;
 }
 
-.checkbox p {
+.checkbox .labelText {
 	font-size: 1.3rem;
 	font-weight: 300;
 }
 
-.checkbox:has(.input:checked) p {
+.checkbox:has(.input:checked) .labelText {
 	color: lightgray;
 	text-decoration: line-through;
 }

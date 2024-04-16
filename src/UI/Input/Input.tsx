@@ -13,7 +13,7 @@ const Input = React.forwardRef<
 		checked?: boolean;
 		value?: string;
 		onChange?: React.ChangeEventHandler<HTMLInputElement>;
-		onClick?: React.MouseEventHandler
+		onClick?: React.MouseEventHandler;
 	}
 >((props, ref) => {
 	return (
@@ -31,7 +31,11 @@ const Input = React.forwardRef<
 						<label className={classes.label} htmlFor={`checkbox${props.id}`}>
 							<Svg name='check' size={20} fill='#77C0AF' />
 						</label>
-						<p>{props.text}</p>
+						<label
+							className={classes.labelText}
+							htmlFor={`checkbox${props.id}`}>
+							{props.text}
+						</label>
 					</>
 				)}
 
@@ -54,7 +58,9 @@ const Input = React.forwardRef<
 							name={props.name}
 							value={props.text}
 						/>
-						<label onClick={props.onClick} htmlFor={`radio${props.id}`}>{props.text}</label>
+						<label onClick={props.onClick} htmlFor={`radio${props.id}`}>
+							{props.text}
+						</label>
 					</>
 				)}
 			</div>

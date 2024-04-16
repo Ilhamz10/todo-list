@@ -15,7 +15,7 @@ export const TodoContext = createContext<TodosContextObj>({
 	setTodoChecked: (id: number, cehcked: boolean) => {},
 });
 
-const TodoContextProvider: React.FC<React.PropsWithChildren> = (props) => {
+const TodoContextProvider: React.FC<React.PropsWithChildren> = ({children}) => {
 	const [todos, setTodos] = useState<ITodo[]>([]);
 
 	function addTodoHandler(todoText: string) {
@@ -49,7 +49,7 @@ const TodoContextProvider: React.FC<React.PropsWithChildren> = (props) => {
 
 	return (
 		<TodoContext.Provider value={contextValue}>
-			{props.children}
+			{children}
 		</TodoContext.Provider>
 	);
 };

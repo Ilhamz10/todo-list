@@ -1,11 +1,17 @@
-.isActive svg{
-    transform: rotate(180deg);
+.isActive span svg {
+	transform: rotate(180deg);
 }
 
-.dropDownContent{
-    transition: .3s;
+.dropDownContent {
+	transition: 0.3s;
+	display: grid;
+	grid-template-rows: 0fr;
 }
 
-.isActive .dropDownContent{
-    display: none;
+.dropDownContent > div {
+	overflow: hidden;
+}
+
+.isActive .dropDownContent {
+	grid-template-rows: 1fr;
 }

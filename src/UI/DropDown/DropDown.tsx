@@ -9,28 +9,29 @@ const DropDown: React.FC<
 	React.PropsWithChildren<{
 		buttonElement: ReactElement;
 	}>
-> = (props) => {
-	const todoCtx = useContext(TodoContext)
+> = ({ children, buttonElement }) => {
+	const todoCtx = useContext(TodoContext);
 
 	useEffect(() => {
-		if(todoCtx.items.length > 0){
-			setIsActive(true)
+		if (todoCtx.items.length > 0) {
+			setIsActive(true);
 		} else {
-			setIsActive(false)
+			setIsActive(false);
 		}
-	}, [todoCtx.items])
-	
+	}, [todoCtx.items]);
 
 	const [isActive, setIsActive] = useState(false);
 	return (
-		<div className={`${!isActive && classes.isActive}`}>
+		<div className={`${isActive && classes.isActive}`}>
 			<Button>
 				<span onClick={() => setIsActive((prev) => !prev)}>
 					<Svg name='arrow' fill='lightgray' size={25} />
 				</span>
-				{props.buttonElement}
+				{buttonElement}
 			</Button>
-			<div className={classes.dropDownContent}>{props.children}</div>
+			<div className={classes.dropDownContent}>
+				<div>{children}</div>
+			</div>
 		</div>
 	);
 };

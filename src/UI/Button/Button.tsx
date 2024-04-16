@@ -1,14 +1,14 @@
 import React from 'react';
 import classes from './Button.module.css';
 
-const Button: React.FC<
-	React.PropsWithChildren<{ onClick?: () => void; }>
-> = (props) => {
+interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
+	children: React.ReactNode;
+}
+
+const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
 	return (
-		<button
-			className={classes.button}
-			onClick={props.onClick}>
-			{props.children}
+		<button className={classes.button} {...props}>
+			{children}
 		</button>
 	);
 };
